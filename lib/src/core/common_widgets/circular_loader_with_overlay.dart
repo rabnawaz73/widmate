@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_videos_downloader/src/core/media_query.dart';
+import 'package:flutter_social_videos_downloader/src/core/utils/app_colors.dart';
 
 class CircularLoaderWithOverlay extends StatelessWidget {
   const CircularLoaderWithOverlay({super.key});
@@ -15,7 +16,11 @@ class CircularLoaderWithOverlay extends StatelessWidget {
             color: Colors.black.withOpacity(0.5),
           ),
         ),
-        const Center(child: CircularProgressIndicator()),
+        const Center(
+          child: CircularProgressIndicator(
+            color: AppColors.primaryColor,
+          ),
+        ),
       ],
     );
   }

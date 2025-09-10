@@ -3,8 +3,6 @@ import 'package:flutter_social_videos_downloader/src/features/social_videos_down
 import 'package:intl/intl.dart';
 
 import '../../../../../../core/utils/app_colors.dart';
-import '../../../../../../core/utils/font_manager.dart';
-import '../../../../../../core/utils/styles_manager.dart';
 import '../../../../domain/entities/video_link.dart';
 
 class CountView extends StatelessWidget {

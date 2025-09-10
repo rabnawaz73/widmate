@@ -8,9 +8,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:video_thumbnail/video_thumbnail.dart';
 
 import '../../../../../core/helpers/dir_helper.dart';
-import '../../../../../core/helpers/permission_helper.dart';
 import '../../../../../core/utils/app_enums.dart';
-import '../../../../../core/utils/app_strings.dart';
 import '../../../domain/entities/download_item.dart';
 import '../../../domain/entities/video_item.dart';
 import '../../../domain/usecase/get_video_usecase.dart';
@@ -97,7 +95,7 @@ class DownloaderBloc extends Bloc<DownloaderEvent, DownloaderState> {
     return "$appPath/$id.mp4";
   }
 
-  _updateItem(int index, DownloadItem item) {
+  void _updateItem(int index, DownloadItem item) {
     if (index == -1) {
       newDownloads.last = item;
     } else {
@@ -105,7 +103,7 @@ class DownloaderBloc extends Bloc<DownloaderEvent, DownloaderState> {
     }
   }
 
-  _addItem(int index, DownloadItem item) {
+  void _addItem(int index, DownloadItem item) {
     if (index == -1) {
       newDownloads.add(item);
     } else {

@@ -21,7 +21,7 @@ class DownloaderScreenSupportedPlatforms extends StatelessWidget {
         Text(
           'Supported Platforms',
           style: getMediumStyle(
-              color: Theme.of(context).textTheme.bodyLarge!.color,
+              color: Theme.of(context).textTheme.bodyLarge?.color ?? Theme.of(context).colorScheme.onSurface,
               fontSize: 16),
         ),
         const SizedBox(height: 24),

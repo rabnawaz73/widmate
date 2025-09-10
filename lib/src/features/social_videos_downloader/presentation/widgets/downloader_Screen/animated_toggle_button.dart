@@ -8,8 +8,7 @@ class AnimatedToggleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ThemeBloc, ThemeState>(+
-    -
+    return BlocBuilder<ThemeBloc, ThemeState>(
       builder: (context, state) {
         final isDarkMode = Theme.of(context).brightness == Brightness.dark;
         return IconButton(

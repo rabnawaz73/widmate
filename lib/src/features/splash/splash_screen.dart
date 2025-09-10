@@ -10,7 +10,7 @@ import '../../core/utils/app_constants.dart';
 import '../../core/utils/preload_svg_assets.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen>
     await preLoadAssets.preLoadLoadingScreenAssets();
   }
 
-  navigateToNextScreen() {
+  void navigateToNextScreen() {
     if (mounted) {
       Navigator.of(context).pushNamedAndRemoveUntil(
         Routes.downloader,
